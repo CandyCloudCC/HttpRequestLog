@@ -1,0 +1,41 @@
+{
+  "name": "starcode.test.reports.server",
+  "version": "0.0.1",
+  "private": true,
+  "title": "Star Code Test Reports Server",
+  "description": "Star Code Test Reports Server",
+  "main": "./main.ts",
+  "scripts": {
+    "build": "sh build.sh"
+  },
+  "keywords": [
+    "koa"
+  ],
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "http-errors": "^1.8.0",
+    "jsonfile": "^6.0.1",
+    "koa": "^2.13.0",
+    "koa-body": "^4.2.0",
+    "koa-router": "^9.1.0",
+    "lodash": "^4.17.15",
+    "moment": "^2.26.0",
+    "moment-timezone": "^0.5.31",
+    "pg": "^8.2.2",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.0",
+    "winston-transport": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/http-errors": "^1.8.0",
+    "@types/koa": "^2.11.3",
+    "@types/koa-router": "^7.4.1",
+    "@types/lodash": "^4.14.157",
+    "@types/pg": "^7.14.4",
+    "eslint": "^7.4.0",
+    "eslint-config-prettier": "^6.11.0",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.6",
+    "yarn": "^1.22.4"
+  }
+}
