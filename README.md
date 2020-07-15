@@ -14,19 +14,35 @@ yarn install
 yarn run build
 ```
 
-## 2. 运行
+## 2. 部署代码
+
+```bash
+# 1. 配置目标运行目录
+DESTINATION=~/www/http.request.log
+
+# 2. 拷贝文件
+cp -R ./dist/* $DESTINATION/
+
+# 3. 安装运行时依赖
+yarn install --production
+```
+
+## 3. 运行
 
 ```bash
 # 1. node 直接运行
-node ./dist/src/main.js
+node ./src/main.js
 
 # 2. docker 运行
-WORKDIR=~/Documents/github/HttpRequestLog
+WORKDIR=~/www/http.request.log
+LOGDIR=~/log/http.request.log
+
 docker run -d -p 21066:21066 \
   --restart=always \
   --name http_request_log_1 \
-  --volume $WORKDIR/dist:/www/server \
-  --volume $WORKDIR/node_modules:/www/server/node_modules \
+  --volume $WORKDIR:/www/server \
+  --volume $LOGDIR:/www/log \
+  --env NODE_ENV=production \
   --workdir /www/server \
   node:lts node src/main.js
 ```
