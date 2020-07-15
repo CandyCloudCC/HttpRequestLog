@@ -1,9 +1,9 @@
 {
-  "name": "starcode.test.reports.server",
+  "name": "starcode.http.request.log.service",
   "version": "0.0.1",
   "private": true,
-  "title": "Star Code Test Reports Server",
-  "description": "Star Code Test Reports Server",
+  "title": "starcode http request log service",
+  "description": "starcode http request log service",
   "main": "./main.ts",
   "scripts": {
     "build": "sh build.sh"
@@ -27,7 +27,9 @@
     "winston-transport": "^4.4.0"
   },
   "devDependencies": {
+    "@types/app-root-path": "^1.2.4",
     "@types/http-errors": "^1.8.0",
+    "@types/jsonfile": "^6.0.0",
     "@types/koa": "^2.11.3",
     "@types/koa-router": "^7.4.1",
     "@types/lodash": "^4.14.157",
