@@ -37,7 +37,7 @@ node ./src/main.js
 WORKDIR=~/www/http.request.log
 LOGDIR=~/log/http.request.log
 
-docker run -d -p 21066:21066 \
+docker run -d -p 21065:21065 \
   --restart=always \
   --name http_request_log_1 \
   --volume $WORKDIR:/www/server \
